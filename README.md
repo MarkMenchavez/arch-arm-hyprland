@@ -24,3 +24,8 @@ sudo visudo
 Full System Upgrade
 sudo pacman -Syu 
 
+Install Packages
+sudo pacman -S fastfetch cowsay lolcat figlet fortune-mod speedtest-cli htop cmatix git base-devel
+
+
+
