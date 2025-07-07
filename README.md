@@ -27,7 +27,7 @@ sudo pacman -Syu
 Install Packages
 sudo pacman -S fastfetch cowsay lolcat figlet fortune-mod
 sudo pacman -S cmatrix asciiquarium
-sudo pacman -S speedtest-cli htop
+sudo pacman -S speedtest-cli gping htop duf
 sudo pacman -S ranger
 sudo pacman -S starship nerd-fonts
 sudo pacman -S lsd tldr fzf bat
