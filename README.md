@@ -13,3 +13,14 @@ Full Resolution Retina Display
 Bridged Networking: Auto
 80 GB Hard Disk NVMe
 Keyboard MAC Profile - Disabled Shortcuts
+
+Configure Pacman Mirrors
+/etc/pacman.d/mirrorList
+
+Edit sudoers to make group wheel execute any command
+export EDITOR=nano
+sudo visudo
+
+Full System Upgrade
+sudo pacman -Syu 
+
