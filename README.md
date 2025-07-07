@@ -25,7 +25,26 @@ Full System Upgrade
 sudo pacman -Syu 
 
 Install Packages
-sudo pacman -S fastfetch cowsay lolcat figlet fortune-mod speedtest-cli htop cmatix git base-devel
+sudo pacman -S fastfetch cowsay lolcat figlet fortune-mod
+sudo pacman -S cmatrix asciiquarium
+sudo pacman -S speedtest-cli htop
+sudo pacman -S ranger
+sudo pacman -S starship nerd-fonts
+sudo pacman -S lsd tldr fzf bat
 
 
+Install AUR helper
+sudo pacman -S --needed git base-devel
+cd /tmp
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+Install AUR Packages
+yay -S cbonsai
+
+Configure BASH
+- starship 
+- PS1
+- alias
 
