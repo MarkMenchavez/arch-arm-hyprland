@@ -26,11 +26,19 @@ sudo pacman -Syu
 
 Install Packages  
 sudo pacman -S fastfetch cowsay lolcat figlet fortune-mod  
+sudo pacman -S net-tools dnsutils
 sudo pacman -S cmatrix asciiquarium  
 sudo pacman -S speedtest-cli gping htop duf  
 sudo pacman -S ranger  
 sudo pacman -S starship nerd-fonts  
 sudo pacman -S lsd tldr fzf bat  
+
+sudo pacman -S xdg-user-dirs
+xdg-user-dirs-update
+
+sudo pacman -S pacman-contrib
+sudo systemctl enable paccache.timer
+
 
 Install AUR helper
 sudo pacman -S --needed git base-devel  
@@ -47,3 +55,4 @@ Configure BASH
 - PS1
 - alias
 
+sudo pacman -S hyprland foot aquamarine hyprlang hyprcursor hyprutils hyprgraphics xdg-desktop-portal-hyprland
