@@ -121,11 +121,13 @@ sudo pacman -S ranger               # Console file manager
 
 [x] Install Hyprland
 ```
-sudo pacman -S hyprland
+sudo pacman -S hyprland             # Dynamic Tiling Window Manager for Wayland compositor
+sudo pacman -S hyprpaper            # Wallpaper Utility
 sudo pacman -S foot                 # No GPU Acceleration Terminal Emulator
 sudo pacman -S kitty                # GPU Accelerated Terminal Emulator
 sudo pacman -S wofi                 # GTK Application Launcher
 sudo pacman -S firefox              # Internet browser
+sudo pacman -S archlinux-wallpaper  # Sample Arch Wallpapers
 ```
 
 [x] Use Software OpenGL
@@ -158,6 +160,19 @@ bind = $mainMod SHIFT, B, exec, $privateBrowser
 bind = $mainMod, Q, killactive,
 bind = $mainMod, X, exit,
  
+```
+
+[x] Configure Hyprpaper
+```
+touch .config/hypr/hyprpaper.conf
+nano .config/hypr/hyprpaper.conf
+
+preload = /usr/share/backgrounds/archlinux/archbtw.png
+wallpaper = ,/usr/share/backgrounds/archlinux/archbtw.png
+splash = false
+
+nano .config/hypr/hyprland.conf
+exec-once = hyprpaper
 ```
 
 [x] Configure kitty
