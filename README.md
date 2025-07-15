@@ -82,8 +82,10 @@ yay -S fastfetch cowsay lolcat figlet fortune-mod  # fun terminal utilities
 yay -S cmatrix cbonsai asciiquarium sl             # ascii art
 ```
 
-[x] Modify .bashrc
+[x] Dispay Ascii Art on Terminal
 ```
+nano .bashrc
+
 alias reload='clear && source ~/.bashrc'
 alias update='sudo pacman -Syu'
 
@@ -128,6 +130,7 @@ sudo pacman -S wofi                 # GTK Application Launcher
 [x] Use Software OpenGL
 ```
 nano .bash_profile
+
 export LIBGL_ALWAYS_SOFTWARE=1
 ```
 
