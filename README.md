@@ -159,7 +159,13 @@ bind = $mainMod SHIFT, B, exec, $privateBrowser
 
 bind = $mainMod, Q, killactive,
 bind = $mainMod, X, exit,
- 
+
+misc {
+  force_default_wallpaper = 0
+  disable_hyprland_logo = true
+}  
+
+widowrulev2 = opacity 0.95 0.75, class:^(firefox)$ 
 ```
 
 [x] Configure Hyprpaper
