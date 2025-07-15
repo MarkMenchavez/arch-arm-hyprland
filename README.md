@@ -145,7 +145,7 @@ monitor=,1920x1200@60,auto,1
 $terminal = kitty  #foot
 $menu = wofi --show drun
 $fileManager =
-$browswer =
+$browser =
 $privateBrowser =
 
 bind = $mainMod, RETURN, exec, $terminal
