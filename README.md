@@ -4,7 +4,7 @@
 https://archboot.com  
 archboot-2025.06.29-02.28-6.15.3-3-aarch64-ARCH-local-aarch64.iso  
 
-[x] Create new Virtual Machine
+[x] Create new Virtual Machine  
 Type 2 Hypervisor: VMWare Fusion 13.6 @ M1
 Operating System: Other 64-bit Arm  
 Settings:
