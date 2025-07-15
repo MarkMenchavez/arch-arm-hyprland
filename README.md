@@ -184,7 +184,8 @@ sudo pacman -S wireplumber pipewire pipewire-audio pipewire-pulse pipewire-alsa
 sudo reboot
 ```
 
-[x] Install packages
+[x] Configure GTK Settings
 ```
-sudo pacman -S nwg-look            # GTK Settings Edito for Wayland
+sudo pacman -S nwg-look            # GTK Settings Editor for Wayland
+nwg-look                           # Color Scheme - Prefer dark
 ```
