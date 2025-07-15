@@ -52,9 +52,9 @@ Settings:
 ```
 nano /etc/pacman.d/mirrorlist   # Uncomment Singapore Mirror
 pacman -Syu                     # Full system upgrade
-pacman -S sudo                  # Execue a command as the super user 
+pacman -S sudo                  # Execute a command as the super user 
 export EDITOR=nano  
-sudo visudo                     # %wheel ALL=(ALL:ALL) ALL
+sudo visudo                     # Uncomment %wheel ALL=(ALL:ALL) ALL
 ```
 
 [x] Configure pacman
@@ -82,7 +82,7 @@ yay -S fastfetch cowsay lolcat figlet fortune-mod  # fun terminal utilities
 yay -S cmatrix cbonsai asciiquarium sl             # ascii art
 ```
 
-[x] Dispay Ascii Art on Terminal
+[x] Display ASCII Art on Terminal
 ```
 nano .bashrc
 
@@ -177,4 +177,8 @@ if [ "$XDG_SESSION_TYPE" = "Wayland" ]; then
 fi
 ```
 
+[x] Install wireplumber and pipewire
+```
+sudo pacman -S wireplumber pipewire pipewire-audio pipewire-pulse pipewire-alsa
+```
 
