@@ -125,6 +125,7 @@ sudo pacman -S hyprland
 sudo pacman -S foot                 # No GPU Acceleration Terminal Emulator
 sudo pacman -S kitty                # GPU Accelerated Terminal Emulator
 sudo pacman -S wofi                 # GTK Application Launcher
+sudo pacman -S firefox              # Internet browser
 ```
 
 [x] Use Software OpenGL
@@ -145,8 +146,8 @@ monitor=,1920x1200@60,auto,1
 $terminal = kitty  #foot
 $menu = wofi --show drun
 $fileManager =
-$browser =
-$privateBrowser =
+$browser = firefox
+$privateBrowser = firefox --private-window
 
 bind = $mainMod, RETURN, exec, $terminal
 bind = $mainMod, SPACE, exec, $menu
@@ -180,5 +181,10 @@ fi
 [x] Install wireplumber and pipewire
 ```
 sudo pacman -S wireplumber pipewire pipewire-audio pipewire-pulse pipewire-alsa
+sudo reboot
 ```
 
+[x] Install packages
+```
+sudo pacman -S nwg-look            # GTK Settings Edito for Wayland
+```
