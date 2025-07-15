@@ -189,3 +189,16 @@ sudo reboot
 sudo pacman -S nwg-look            # GTK Settings Editor for Wayland
 nwg-look                           # Color Scheme - Prefer dark
 ```
+
+[x] Install dotnet SDK
+```
+https://dotnet.microsoft.com/en-us/download/dotnet/8.0
+
+DOTNET_FILE=dotnet-sdk-8.0.412-linux-arm64.tar.gz
+export DOTNET_ROOT=$HOME/.dotnet
+mkdir -p "$DOTNET_ROOT" && tar zxf "$DOTNET_FILE" -C "$DOTNET_ROOT"
+
+nano .bash_profile
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+```
