@@ -208,5 +208,8 @@ export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 yay -S visual-studio-code-bin
 
 nano .bashrc
-alias code='code --ozone-platform=wayland'
+alias code='code --ozone-platform=wayland'    # For running from termina
+
+sudo nano /usr/share/applications/code.desktop
+Exec = /usr/bin/code --ozone-platform=wayland %F
 ```
