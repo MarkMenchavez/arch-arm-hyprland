@@ -52,7 +52,7 @@ Settings:
 ```
 nano /etc/pacman.d/mirrorlist   # Uncomment Singapore Mirror
 pacman -Syu                     # Full system upgrade
-pacman -S sudo                  # Install sudo
+pacman -S sudo                  # Execue a command as the super user 
 export EDITOR=nano  
 sudo visudo                     # %wheel ALL=(ALL:ALL) ALL
 ```
@@ -110,8 +110,16 @@ sudo pacman -S ranger               # Console file manager
 [x] Install Hyprland
 ```
 sudo pacman -S hyprland
-sudo pacman -S foot 
-sudo pacman -S aquamarine hyprlang hyprcursor hyprutils hyprgraphics xdg-desktop-portal-hyprland
+sudo pacman -S foot                 # No GPU Acceleration Terminal Emulator
+sudo pacman -S kitty                # GPU Accelerated Terminal Emulator
+sudo pacman -S wofi                 # GTK Application Launcher
+#sudo pacman -S aquamarine hyprlang hyprcursor hyprutils hyprgraphics xdg-desktop-portal-hyprland
+```
+
+[x] Use Software OpenGL
+```
+nano .bash_profile
+export LIBGL_ALWAYS_SOFTWARE=1
 ```
 
 [x] Configure Hyprland
@@ -119,6 +127,12 @@ sudo pacman -S aquamarine hyprlang hyprcursor hyprutils hyprgraphics xdg-desktop
 nano .config/hypr/hyprland.conf
 
 monitor=,1920x1200@60,auto,1
+
+$terminal = kitty
+$menu = wofi --show drun
+$fileManager =
+$browswer =
+$privateBrowser =
 
 bind = $mainMod, RETURN, exec, $terminal
 bind = $mainMod, SPACE, exec, $menu
