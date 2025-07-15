@@ -202,3 +202,11 @@ nano .bash_profile
 export DOTNET_ROOT=$HOME/.dotnet
 export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 ```
+
+[x] Install Visual Studio Code
+```
+yay -S visual-studio-code-bin
+
+nano .bashrc
+alias code='code --ozone-platform=wayland'
+```
