@@ -69,7 +69,7 @@ makepkg -si
 [x] Install packages
 ```
 yay -S fastfetch cowsay lolcat figlet fortune-mod  # fun terminal utilities
-yay -S cmatrix cbonsai asciiquarium                # ascii art
+yay -S cmatrix cbonsai asciiquarium sl             # ascii art
 ```
 
 [x] Modify .bashrc
