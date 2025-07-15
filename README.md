@@ -57,6 +57,16 @@ export EDITOR=nano
 sudo visudo                     # %wheel ALL=(ALL:ALL) ALL
 ```
 
+[x] Configure pacman
+```
+nano /etc/pacman.conf            
+
+#Enable the following options
+Color
+VerbosePkgLists
+ILoveCandy
+```
+
 [x] Install AUR helper
 ```
 sudo pacman -S --needed git base-devel  
@@ -113,7 +123,6 @@ sudo pacman -S hyprland
 sudo pacman -S foot                 # No GPU Acceleration Terminal Emulator
 sudo pacman -S kitty                # GPU Accelerated Terminal Emulator
 sudo pacman -S wofi                 # GTK Application Launcher
-#sudo pacman -S aquamarine hyprlang hyprcursor hyprutils hyprgraphics xdg-desktop-portal-hyprland
 ```
 
 [x] Use Software OpenGL
@@ -130,7 +139,7 @@ nano .config/hypr/hyprland.conf
 
 monitor=,1920x1200@60,auto,1
 
-$terminal = kitty
+$terminal = kitty  #foot
 $menu = wofi --show drun
 $fileManager =
 $browswer =
@@ -155,7 +164,6 @@ background_opacity = 0.9
 
 [x] Beautify shell prompt
 ```
-sudo pacman -S nerd-fonts           # TODO: Too many nerd-fonts
 sudo pacman -S starship             # Customize Shell Prompt
 
 starship preset tokyo-night -o ~./config/starship.toml
