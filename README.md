@@ -4,9 +4,9 @@
 https://archboot.com  
 archboot-2025.06.29-02.28-6.15.3-3-aarch64-ARCH-local-aarch64.iso  
 
-[x] Create new Virtual Machine  
+[x] Create a new Virtual Machine  
 Type 2 Hypervisor: VMWare Fusion 13.6 @ M1  
-Operating System: Other 64-bit Arm  
+Operating System: Other 64-bit ARM  
 Settings:
 * 4 Processor Cores  
 * 8192 MB Memory  
@@ -34,12 +34,12 @@ Settings:
     2. Install Packages
     3. Configure System
         * Root Password
-        * Text Editor: NANO
+        * Text Editor: nano
         * MKINITCPIO: SYSTEMD
         * User Configuration
             * Default Shell: BASH
             * Create User Account
-            * Enable as Admistrator and part of WHEEL
+            * Enable as Administrator and part of WHEEL
             * Enter Full Name
             * User Password
         * System Hostname
@@ -47,21 +47,14 @@ Settings:
         * GRUB_UEFI
     5. Reboot 
 
-[x] Enable Repository Mirrors
+
+[x] Allow members of the group wheel to execute any command
 ```
 nano /etc/pacman.d/mirrorlist   # Uncomment Singapore Mirror
-```
-
-[x] Install sudo
-```
 pacman -Syu                     # Full system upgrade
 pacman -S sudo                  # Install sudo
-```
-
-[x] Allow members of group wheel execute any command  
-```
 export EDITOR=nano  
-sudo visudo  
+sudo visudo                     # %wheel ALL=(ALL:ALL) ALL
 ```
 
 [x] Install AUR helper
@@ -73,7 +66,7 @@ cd yay
 makepkg -si  
 ```
 
-[x] Instal packages
+[x] Install packages
 ```
 yay -S fastfetch cowsay lolcat figlet fortune-mod  # fun terminal utilities
 yay -S cmatrix cbonsai asciiquarium                # ascii art
@@ -95,7 +88,7 @@ sudo pacman -S xdg-user-dirs
 xdg-user-dirs-update
 ```
 
-[x] Auto clearn old packages
+[x] Auto clean old packages
 ```
 sudo pacman -S pacman-contrib
 sudo systemctl enable paccache.timer
@@ -119,6 +112,23 @@ sudo pacman -S ranger               # Console file manager
 sudo pacman -S hyprland
 sudo pacman -S foot 
 sudo pacman -S aquamarine hyprlang hyprcursor hyprutils hyprgraphics xdg-desktop-portal-hyprland
+```
+
+[x] Configure Hyprland
+```
+nano .config/hypr/hyprland.conf
+
+monitor=,1920x1200@60,auto,1
+
+bind = $mainMod, RETURN, exec, $terminal
+bind = $mainMod, SPACE, exec, $menu
+bind = $mainMod, E, exec, $fileManager
+bind = $mainMod, B, exec, $browser
+bind = $mainMod SHIFT, B, exec, $privateBrowser
+
+bind = $mainMod, Q, killactive,
+bind = $mainMod, X, exit,
+ 
 ```
 
 [x] Beautify shell prompt
