@@ -213,7 +213,7 @@ sudo pacman -S starship             # Customize Shell Prompt
 starship preset tokyo-night -o ~./config/starship.toml
 
 nano .bashrc
-if [ "$XDG_SESSION_TYPE" = "Wayland" ]; then
+if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
   eval "$(starship init bash)"
 fi
 ```
