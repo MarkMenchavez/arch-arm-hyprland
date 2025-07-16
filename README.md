@@ -121,11 +121,13 @@ sudo pacman -S ranger               # Console file manager
 
 [x] Install hyprland
 ```
-sudo pacman -S hyprland             # Dynamic Tiling Window Manager for Wayland compositor
-sudo pacman -S uwsm libnewt         # Universal Wayland Session Manager
-sudo pacman -S pipewire             # Multimedia Framework
+sudo pacman -S hyprland                        # Dynamic Tiling Window Manager for Wayland compositor
+sudo pacman -S uwsm libnewt                    # Universal Wayland Session Manager
+sudo pacman -S pipewire                        # Multimedia Framework
 sudo pacman -S pipewire-audio pipewire-pulse pipewire-alsa
-sudo pacman -S wireplumber          # Session Manager for pipewire  
+sudo pacman -S wireplumber                     # Session Manager for pipewire
+sudo pacman -S mako                            # Wayland Notification daemon
+sudo pacman -S xdg-desktop-portal-hyprland     # Allows apps to access the desktop
 
 sudo pacman -S hyprpaper            # Wallpaper Utility
 
