@@ -116,7 +116,7 @@ sudo pacman -S lsd                  # List directory contents; Consider alias to
 sudo pacman -S tldr                 # Display simple help pages
 sudo pacman -S fzf                  # Fuzzy finder
 sudo pacman -S bat                  # Print and concatenate files; Consider alias to cat
-sudo pacman -S ranger               # Console file manager
+sudo pacman -S yazi                 # Console file manager
 ```
 
 [x] Install hyprland
@@ -127,6 +127,7 @@ sudo pacman -S pipewire                        # Multimedia Framework
 sudo pacman -S pipewire-audio pipewire-pulse pipewire-alsa
 sudo pacman -S wireplumber                     # Session Manager for pipewire
 sudo pacman -S mako                            # Wayland Notification daemon
+sudo pacman -S waybar                          # Wayland Statusbar
 sudo pacman -S xdg-desktop-portal-hyprland     # Allows apps to access the desktop
 sudo pacman -S xdg-desktop-portal-gtk          
 sudo pacman -S hyprpolkitagent
@@ -174,6 +175,11 @@ bind = $mainMod SHIFT, B, exec, $privateBrowser
 bind = $mainMod, Q, killactive,
 bind = $mainMod SHIFT, X, exec, uswm stop
 
+general {
+    gaps_in = 5
+    gaps_out = 5
+}
+
 misc {
   force_default_wallpaper = -1 
   disable_hyprland_logo = true
@@ -190,7 +196,7 @@ if uwsm check may-start; then
 fi
 ```
 
-[x] Configure hyprpaper, hyprpolkitagent
+[x] Configure hyprpaper, hyprpolkitagent, waybar
 ```
 touch .config/hypr/hyprpaper.conf
 nano .config/hypr/hyprpaper.conf
@@ -199,11 +205,9 @@ preload = /usr/share/backgrounds/archlinux/archbtw.png
 wallpaper = ,/usr/share/backgrounds/archlinux/archbtw.png
 splash = false
 
-#nano .config/hypr/hyprland.conf
-#exec-once = uwsm app --hyprpaper
-
 systemctl --user enable --now hyprpaper.service
 systemctl --user enable --now hyprpolkitagent.service
+systemctl --user enable --now waybar.service
 ```
 
 [x] Configure kitty
