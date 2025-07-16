@@ -28,18 +28,18 @@ Settings:
             * Single Boot
             * BOOT: 512
             * SWAP: 8192
-            * File System: BTRFS
+            * File System: btrfs
             * ROOT: 40960
             * HOME: Remaining
     2. Install Packages
     3. Configure System
         * Root Password
         * Text Editor: nano
-        * MKINITCPIO: SYSTEMD
+        * MKINITCPIO: systemd
         * User Configuration
-            * Default Shell: BASH
+            * Default Shell: bash
             * Create User Account
-            * Enable as Administrator and part of WHEEL
+            * Enable as Administrator and part of wheel
             * Enter Full Name
             * User Password
         * System Hostname
@@ -119,10 +119,12 @@ sudo pacman -S bat                  # Print and concatenate files; Consider alia
 sudo pacman -S ranger               # Console file manager
 ```
 
-[x] Install Hyprland
+[x] Install hyprland
 ```
 sudo pacman -S hyprland             # Dynamic Tiling Window Manager for Wayland compositor
+sudo pacman -S uwsm libnewt         # Universal Wayland Session Manager
 sudo pacman -S hyprpaper            # Wallpaper Utility
+
 sudo pacman -S foot                 # No GPU Acceleration Terminal Emulator
 sudo pacman -S kitty                # GPU Accelerated Terminal Emulator
 sudo pacman -S wofi                 # GTK Application Launcher
@@ -137,7 +139,7 @@ nano .bash_profile
 export LIBGL_ALWAYS_SOFTWARE=1
 ```
 
-[x] Configure Hyprland
+[x] Configure hyprland
 ```
 nano .config/hypr/hyprland.conf
 
@@ -168,7 +170,15 @@ misc {
 widowrulev2 = opacity 0.95 0.75, class:^(firefox)$ 
 ```
 
-[x] Configure Hyprpaper
+[x] Configure uwsm
+```
+nano .bash_profile
+if uwsm check may-start; then
+  exec uwsm start hyprland-uwsm.desktop
+fi
+```
+
+[x] Configure hyprpaper
 ```
 touch .config/hypr/hyprpaper.conf
 nano .config/hypr/hyprpaper.conf
@@ -229,8 +239,8 @@ export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 yay -S visual-studio-code-bin
 
 nano .bashrc
-alias code='code --ozone-platform=wayland'    # For running from termina
+alias code='code --ozone-platform=wayland'    # For running from terminal
 
-sudo nano /usr/share/applications/code.desktop
+sudo nano /usr/share/applications/code.desktop # For running from wofi
 Exec = /usr/bin/code --ozone-platform=wayland %F
 ```
