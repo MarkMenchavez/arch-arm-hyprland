@@ -80,6 +80,7 @@ makepkg -si
 ```
 yay -S fastfetch cowsay lolcat figlet fortune-mod  # fun terminal utilities
 yay -S cmatrix cbonsai asciiquarium sl             # ascii art
+sudo pacman -S zoxide                              # better cd
 ```
 
 [x] Display ASCII Art on Terminal
@@ -92,6 +93,8 @@ alias update='sudo pacman -Syu'
 fastfetch
 echo mcdm | figlet | lolcat
 fortune -s | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n1) | lolcat
+
+eval "$(zoxide init --cmd cd bash)"
 ```
 
 [x] Configure Standard Directories
