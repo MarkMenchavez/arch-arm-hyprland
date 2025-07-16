@@ -123,12 +123,18 @@ sudo pacman -S ranger               # Console file manager
 ```
 sudo pacman -S hyprland             # Dynamic Tiling Window Manager for Wayland compositor
 sudo pacman -S uwsm libnewt         # Universal Wayland Session Manager
+sudo pacman -S pipewire             # Multimedia Framework
+sudo pacman -S pipewire-audio pipewire-pulse pipewire-alsa
+sudo pacman -S wireplumber          # Session Manager for pipewire  
+
 sudo pacman -S hyprpaper            # Wallpaper Utility
 
 sudo pacman -S foot                 # No GPU Acceleration Terminal Emulator
 sudo pacman -S kitty                # GPU Accelerated Terminal Emulator
 sudo pacman -S wofi                 # GTK Application Launcher
+sudo pacman -S thunar               # GTK File Manager
 sudo pacman -S firefox              # Internet browser
+
 sudo pacman -S archlinux-wallpaper  # Sample Arch Wallpapers
 ```
 
@@ -149,21 +155,22 @@ monitor=,1920x1200@60,auto,1
 
 $terminal = kitty  #foot
 $menu = wofi --show drun
-$fileManager =
+$fileManager = thunar
 $browser = firefox
 $privateBrowser = firefox --private-window
 
 bind = $mainMod, RETURN, exec, $terminal
 bind = $mainMod, SPACE, exec, $menu
-bind = $mainMod, E, exec, $fileManager
+
+bind = $mainMod, F, exec, $fileManager
 bind = $mainMod, B, exec, $browser
 bind = $mainMod SHIFT, B, exec, $privateBrowser
 
 bind = $mainMod, Q, killactive,
-bind = $mainMod, X, exit,
+bind = $mainMod SHIFT, X, exec, uswm stop
 
 misc {
-  force_default_wallpaper = 0
+  force_default_wallpaper = -1 
   disable_hyprland_logo = true
 }  
 
@@ -187,8 +194,10 @@ preload = /usr/share/backgrounds/archlinux/archbtw.png
 wallpaper = ,/usr/share/backgrounds/archlinux/archbtw.png
 splash = false
 
-nano .config/hypr/hyprland.conf
-exec-once = hyprpaper
+#nano .config/hypr/hyprland.conf
+#exec-once = uwsm app --hyprpaper
+
+systemctl --user enable --now hyprpaper.service
 ```
 
 [x] Configure kitty
@@ -209,16 +218,16 @@ if [ "$XDG_SESSION_TYPE" = "Wayland" ]; then
 fi
 ```
 
-[x] Install wireplumber and pipewire
-```
-sudo pacman -S wireplumber pipewire pipewire-audio pipewire-pulse pipewire-alsa
-sudo reboot
-```
-
 [x] Configure GTK Settings
 ```
 sudo pacman -S nwg-look            # GTK Settings Editor for Wayland
 nwg-look                           # Color Scheme - Prefer dark
+```
+
+[x] Configure ALSA
+```
+sudo nano /usr/share/wireplumber/wireplumber.conf.d/alsa-vm.conf
+audio.format = "S16LE"
 ```
 
 [x] Install dotnet SDK
