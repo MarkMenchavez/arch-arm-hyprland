@@ -128,6 +128,9 @@ sudo pacman -S pipewire-audio pipewire-pulse pipewire-alsa
 sudo pacman -S wireplumber                     # Session Manager for pipewire
 sudo pacman -S mako                            # Wayland Notification daemon
 sudo pacman -S xdg-desktop-portal-hyprland     # Allows apps to access the desktop
+sudo pacman -S xdg-desktop-portal-gtk          
+sudo pacman -S hyprpolkitagent
+sudo pacman -S qt5-wayland qt6-wayland
 
 sudo pacman -S hyprpaper            # Wallpaper Utility
 
@@ -187,7 +190,7 @@ if uwsm check may-start; then
 fi
 ```
 
-[x] Configure hyprpaper
+[x] Configure hyprpaper, hyprpolkitagent
 ```
 touch .config/hypr/hyprpaper.conf
 nano .config/hypr/hyprpaper.conf
@@ -200,6 +203,7 @@ splash = false
 #exec-once = uwsm app --hyprpaper
 
 systemctl --user enable --now hyprpaper.service
+systemctl --user enable --now hyprpolkitagent.service
 ```
 
 [x] Configure kitty
