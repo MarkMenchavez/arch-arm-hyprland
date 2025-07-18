@@ -130,13 +130,16 @@ sudo pacman -S pipewire                        # Multimedia Framework
 sudo pacman -S pipewire-audio pipewire-pulse pipewire-alsa
 sudo pacman -S wireplumber                     # Session Manager for pipewire
 sudo pacman -S mako                            # Wayland Notification daemon
-sudo pacman -S waybar                          # Wayland Statusbar
 sudo pacman -S xdg-desktop-portal-hyprland     # Allows apps to access the desktop
 sudo pacman -S xdg-desktop-portal-gtk          
 sudo pacman -S hyprpolkitagent
 sudo pacman -S qt5-wayland qt6-wayland
 
 sudo pacman -S hyprpaper            # Wallpaper Utility
+
+sudo pacman -S hypridle hyprlock    # Idle/Lock Utility
+sudo pacman -S waybar               # Wayland Statusbar
+
 
 sudo pacman -S foot                 # No GPU Acceleration Terminal Emulator
 sudo pacman -S kitty                # GPU Accelerated Terminal Emulator
@@ -211,6 +214,7 @@ splash = false
 systemctl --user enable --now hyprpaper.service
 systemctl --user enable --now hyprpolkitagent.service
 systemctl --user enable --now waybar.service
+systemctl --user enable --now hypridle.service
 ```
 
 [x] Configure kitty
@@ -265,4 +269,9 @@ alias code='code --ozone-platform=wayland'    # For running from terminal
 
 sudo nano /usr/share/applications/code.desktop # For running from wofi
 Exec = /usr/bin/code --ozone-platform=wayland %F
+```
+
+[x] Install Docker
+```
+sudo packan -S docker lazydocker
 ```
