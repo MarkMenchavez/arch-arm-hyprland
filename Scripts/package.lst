@@ -1,0 +1,83 @@
+# System
+pacman-contrib
+
+pipewire
+pipewire-alsa
+pipewire-audio
+pipewire-jack
+pipewire-puls
+gst-plugin-pipewire
+wireplumber
+pavucontrol
+paxmixer
+
+networkmanager
+network-manager-applet
+
+bluez
+bluez-utils
+blueman
+
+brightnessctl
+
+usidkie
+
+# Shell
+fastfetch
+cowsay
+lolcat
+figlet
+fortune-mod
+cmatrix
+cbonsai
+asciiquarium
+sl
+pokeget
+starship
+
+# Utitlies
+bat				#Better cat
+zoxide				#Better cd
+eza				#Better ls
+tldr				#better man
+
+fzf				#Fuzzy finder
+yazi				#File manager
+
+speedtest-cli			#Internet bandwidth
+gping				#Graphical ping
+htop				#Monitoring tool
+duf				#Disk usage
+
+# Hyprland
+hyprland
+uwsm
+libnewt
+mako
+gdg-user-dirs
+xdg-desktop-portal-hyprland
+xdg-desktop-portal-gtk
+hyprpolkitagent
+qt5-wayland
+qt6-wyaland
+
+hyprpaper
+swww
+waypaper
+
+hypridle
+hyprlock
+
+waybar
+
+foot
+kitty
+wofi
+thunar
+firefox
+
+nwg-look
+
+archlinux-wallpaper
+
+

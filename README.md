@@ -79,6 +79,7 @@ makepkg -si
 [x] Install packages
 ```
 yay -S fastfetch cowsay lolcat figlet fortune-mod  # fun terminal utilities
+yay -S pokeget
 yay -S cmatrix cbonsai asciiquarium sl             # ascii art
 sudo pacman -S zoxide                              # better cd
 ```
@@ -115,11 +116,12 @@ sudo pacman -S speedtest-cli        # Test Internet bandwidth
 sudo pacman -S gping                # Graphical ping
 sudo pacman -S htop                 # Display real-time info of running processes
 sudo pacman -S duf                  # Display disk usage
-sudo pacman -S lsd                  # List directory contents; Consider alias to ls 
+sudo pacman -S eza                  # List directory contents; Consider alias to ls 
 sudo pacman -S tldr                 # Display simple help pages
 sudo pacman -S fzf                  # Fuzzy finder
 sudo pacman -S bat                  # Print and concatenate files; Consider alias to cat
 sudo pacman -S yazi                 # Console file manager
+sudo pacman -S cava                 # Audio visualizer
 ```
 
 [x] Install hyprland
