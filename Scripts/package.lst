@@ -39,7 +39,9 @@ starship
 bat				#Better cat
 zoxide				#Better cd
 eza				#Better ls
-tldr				#better man
+tldr				#Better man
+stow				#Better ln
+neovim				#Better nano
 
 fzf				#Fuzzy finder
 yazi				#File manager
@@ -49,12 +51,14 @@ gping				#Graphical ping
 htop				#Monitoring tool
 duf				#Disk usage
 
+libnewt
+cava
+
 # Hyprland
 hyprland
 uwsm
-libnewt
 mako
-gdg-user-dirs
+xdg-user-dirs
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-gtk
 hyprpolkitagent
@@ -62,11 +66,11 @@ qt5-wayland
 qt6-wyaland
 
 hyprpaper
-swww
 waypaper
 
 hypridle
 hyprlock
+hyprsysteminfo
 
 waybar
 
