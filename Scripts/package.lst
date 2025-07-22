@@ -83,4 +83,9 @@ nwg-look
 ttf-jetbrains-mono-nerd
 archlinux-wallpaper
 
+#Development
+docker
+lazydocker
+lazygit
 
+visual-studio.code-bin
