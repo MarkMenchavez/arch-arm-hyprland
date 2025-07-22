@@ -4,12 +4,10 @@ pacman-contrib
 pipewire
 pipewire-alsa
 pipewire-audio
-pipewire-jack
-pipewire-puls
+pipewire-pulse
 gst-plugin-pipewire
 wireplumber
 pavucontrol
-paxmixer
 
 networkmanager
 network-manager-applet
@@ -20,7 +18,7 @@ blueman
 
 brightnessctl
 
-usidkie
+udiskie
 
 # Shell
 fastfetch
@@ -35,21 +33,21 @@ sl
 pokeget
 starship
 
-# Utitlies
-bat				#Better cat
-zoxide				#Better cd
-eza				#Better ls
-tldr				#Better man
-stow				#Better ln
-neovim				#Better nano
+# Terminal Utitlies
+bat
+zoxide
+eza
+tldr
+stow
+neovim
+fzf
 
-fzf				#Fuzzy finder
-yazi				#File manager
+yazi
 
-speedtest-cli			#Internet bandwidth
-gping				#Graphical ping
-htop				#Monitoring tool
-duf				#Disk usage
+speedtest-cli
+gping
+htop
+duf
 
 libnewt
 cava
@@ -63,7 +61,7 @@ xdg-desktop-portal-hyprland
 xdg-desktop-portal-gtk
 hyprpolkitagent
 qt5-wayland
-qt6-wyaland
+qt6-wayland
 
 hyprpaper
 waypaper
@@ -76,7 +74,7 @@ waybar
 
 foot
 kitty
-wofi
+rofi-wayland
 thunar
 firefox
 
