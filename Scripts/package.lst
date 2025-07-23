@@ -16,6 +16,12 @@ bluez
 bluez-utils
 blueman
 
+libcamera
+
+usbutils
+
+upower
+
 brightnessctl
 
 udiskie
@@ -41,6 +47,12 @@ tldr
 stow
 neovim
 fzf
+
+jq
+curl
+tar
+zip
+unzip
 
 yazi
 
