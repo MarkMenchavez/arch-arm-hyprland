@@ -17,7 +17,7 @@ alias cat='bat'
 alias reload='clear && source ~/.bashrc'
 alias update='yay'
 
-alias code='code --ozone-platform=wayland'
+#alias code='code --ozone-platform=wayland'
 
 
 PS1='[\u@\h \W]\$ '
