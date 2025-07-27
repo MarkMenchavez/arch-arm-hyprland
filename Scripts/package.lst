@@ -48,7 +48,7 @@ tldr
 stow
 neovim
 fzf
-
+trash-cli
 jq
 curl
 tar

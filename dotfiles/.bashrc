@@ -13,6 +13,8 @@ alias lta='eza -aT --group-directories-first --color=auto --git-ignore --no-user
 
 alias grep='grep --color=auto'
 alias cat='bat'
+alias rm='trash'
+
 
 alias reload='clear && source ~/.bashrc'
 alias update='yay'
@@ -25,9 +27,9 @@ PS1='[\u@\h \W]\$ '
 
 
 if [ "$XDG_SESSION_TYPE" = "wayland" ] && [ "$TERM_PROGRAM" = "" ]; then
-  fastfetch --data-raw "$(pokeget random --hide-name)"
-  echo mcdm | figlet | lolcat
-  fortune -s | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n1) | lolcat
+  fastfetch --data-raw "$(pokeget random --hide-name)" --logo-position right
+  #echo mcdm | figlet | lolcat
+  #fortune -s | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n1) | lolcat
   eval "$(starship init bash)"
 fi
 
