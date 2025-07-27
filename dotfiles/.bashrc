@@ -33,4 +33,4 @@ fi
 
 eval "$(zoxide init --cmd cd bash)"
 
-. "$HOME/.local/share/../bin/env"
+#. "$HOME/.local/share/../bin/env"

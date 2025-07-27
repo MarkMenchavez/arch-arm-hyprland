@@ -13,4 +13,4 @@ if uwsm check may-start; then
   exec uwsm start hyprland-uwsm.desktop
 fi
 
-. "$HOME/.local/share/../bin/env"
+#. "$HOME/.local/share/../bin/env"
