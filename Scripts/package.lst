@@ -92,13 +92,16 @@ thunar
 firefox
 
 nwg-look
+qt5ct
 
 ttf-jetbrains-mono-nerd
 archlinux-wallpaper
 
+gnome-themes-extra
+papirus-icon-theme
+
 #Development
 docker
+docker-compose
 lazydocker
-lazygit
-
 visual-studio-code-bin

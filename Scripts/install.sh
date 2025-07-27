@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # File containing package names
-PKG_FILE="package.lst"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PKG_FILE="$SCRIPT_DIR/package.lst"
 
 # Check if yay is installed
 if ! command -v yay &> /dev/null; then
