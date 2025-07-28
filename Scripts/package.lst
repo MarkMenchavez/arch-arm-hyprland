@@ -51,6 +51,7 @@ fzf
 trash-cli
 jq
 curl
+wget
 tar
 zip
 unzip

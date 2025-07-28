@@ -27,7 +27,7 @@ PS1='[\u@\h \W]\$ '
 
 
 if [ "$XDG_SESSION_TYPE" = "wayland" ] && [ "$TERM_PROGRAM" = "" ]; then
-  fastfetch --data-raw "$(pokeget random --hide-name)" --logo-position right
+  clear; fastfetch
   #echo mcdm | figlet | lolcat
   #fortune -s | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n1) | lolcat
   eval "$(starship init bash)"
