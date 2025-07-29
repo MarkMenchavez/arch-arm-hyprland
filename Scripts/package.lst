@@ -40,7 +40,7 @@ bash-pipes
 pokeget
 starship
 
-# Terminal Utitlies
+# Terminal Utilities
 bat
 zoxide
 eza
@@ -88,10 +88,14 @@ waybar
 
 foot
 kitty
+
 rofi-wayland
+
 thunar
+
 firefox
 brave-bin
+qutebrowser
 
 nwg-look
 qt5ct

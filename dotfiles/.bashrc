@@ -14,10 +14,13 @@ alias lta='eza -aT --group-directories-first --color=auto --git-ignore --no-user
 alias grep='grep --color=auto'
 alias cat='bat'
 alias rm='trash'
+alias vim='nvim'
 
+alias logo='./Scripts/random-fastfetch.sh'
+alias motd='./Scripts/random-motd.sh'
 
 alias reload='clear && source ~/.bashrc'
-alias update='yay'
+alias update='yay --noconfirm'
 
 #alias code='code --ozone-platform=wayland'
 

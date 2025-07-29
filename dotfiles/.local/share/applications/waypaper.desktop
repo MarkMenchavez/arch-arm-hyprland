@@ -2,7 +2,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Type=Application
-Exec=waypaper
+Exec=uwsm app waypaper
 Name=Waypaper
 Icon=waypaper
 Terminal=false
