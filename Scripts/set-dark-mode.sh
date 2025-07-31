@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Set GTK to dark theme
-gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
-gsettings set org.gnome.desktop.interface icon-theme "Adwaita-dark"
-gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
+#gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
+#gsettings set org.gnome.desktop.interface icon-theme "Adwaita-dark"
+#gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
 gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
 
 # Set Qt to dark theme
@@ -14,4 +14,4 @@ gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
 # Apply dark icons for Wayland compositors (use a dark icon pack)
 # Assuming you have a dark icon theme installed like Papirus-Dark or Adwaita-Dark
 
-echo "🌙 Dark mode set for Hyprland, GTK, and Qt apps."
+#echo "🌙 Dark mode set for Hyprland, GTK, and Qt apps."

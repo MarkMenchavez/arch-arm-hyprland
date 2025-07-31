@@ -1,4 +1,4 @@
 #!/bin/bash
 
-stow -t ~ ../dotfiles/. --dotfiles --adopt
-git restore
+#stow -t ~ ../dotfiles/. --dotfiles --adopt
+#git restore

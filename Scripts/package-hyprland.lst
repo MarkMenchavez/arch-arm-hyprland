@@ -1,0 +1,66 @@
+
+# A Notification daemon
+mako
+
+# Pipewire
+pipewire
+pipewire-alsa
+pipewire-audio
+pipewire-pulse
+gst-plugin-pipewire
+wireplumber
+pavucontrol
+
+# XDG Desktop Portal
+xdg-user-dirs
+xdg-desktop-portal-hyprland
+xdg-desktop-portal-gtk
+
+# Authentication Agent
+hyprpolkitagent
+
+# Qt Wayland Support
+qt5-wayland
+qt6-wayland
+hyprland-qt-support
+
+# Fonts
+noto-fonts
+ttf-jetbrains-mono-nerd
+
+# Hyprland
+hyprland
+
+# Hypr Ecosystem
+hypridle
+hyprlock
+hyprsysteminfo
+hyprpaper
+hyprpicker
+
+# Statusbar
+waybar
+
+# Wallpaper
+waypaper
+archlinux-wallpaper
+
+# App launchers
+rofi-wayland
+
+# File managers
+thunar
+
+# Systemd startup
+libnewt
+uwsm
+
+# Terminal Emulator
+foot
+kitty
+
+# Browsers
+firefox
+brave-bin
+qutebrowser
+

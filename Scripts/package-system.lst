@@ -1,0 +1,19 @@
+# System
+pacman-contrib
+
+#networkmanager
+#network-manager-applet
+
+#bluez
+#bluez-utils
+#blueman
+
+#libcamera
+
+#usbutils
+
+#upower
+
+#brightnessctl
+
+#udiskie

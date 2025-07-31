@@ -2,7 +2,7 @@
 
 # File containing package names
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PKG_FILE="$SCRIPT_DIR/package.lst"
+PKG_FILE="$SCRIPT_DIR/package-hyprland.lst"
 
 # Check if yay is installed
 if ! command -v yay &> /dev/null; then
@@ -22,6 +22,8 @@ if [ ${#packages[@]} -eq 0 ]; then
     echo "No packages to install. Please check $PKG_FILE"
     exit 0
 fi
+
+GOPATH="$HOME/.local/go"
 
 # Install all packages in a single yay call
 #echo "Installing packages: ${packages[*]}"
