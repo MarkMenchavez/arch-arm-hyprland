@@ -13,7 +13,7 @@ alias lta='eza -aT --group-directories-first --color=auto --git-ignore --no-user
 
 alias grep='grep --color=auto'
 alias cat='bat'
-alias rm='trash'
+#alias rm='trash'
 alias vim='nvim'
 
 alias logo='./Scripts/random-fastfetch.sh'
