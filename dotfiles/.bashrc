@@ -13,9 +13,10 @@ alias lta='eza -aT --group-directories-first --color=auto --git-ignore --no-user
 
 alias grep='grep --color=auto'
 alias cat='bat'
-#alias rm='trash'
+alias rm='trash'
 alias vim='nvim'
 
+alias random='./Scripts/endless-random.sh'
 alias logo='./Scripts/random-fastfetch.sh'
 alias motd='./Scripts/random-motd.sh'
 
@@ -38,4 +39,3 @@ fi
 
 eval "$(zoxide init --cmd cd bash)"
 
-#. "$HOME/.local/share/../bin/env"
