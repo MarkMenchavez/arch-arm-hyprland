@@ -56,11 +56,11 @@ libnewt
 uwsm
 
 # Terminal Emulator
-foot
+#foot
 kitty
 
 # Browsers
-firefox
+#firefox
 brave-bin
-qutebrowser
+#qutebrowser
 
