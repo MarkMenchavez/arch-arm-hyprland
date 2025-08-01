@@ -5,6 +5,8 @@ sudo systemctl enable systemd-timesyncd --now
 
 sudo systemctl enable paccache.timer
 
+sudo systemctl enable ly.service
+
 systemctl --user enable --now pipewire.service
 systemctl --user enable --now pipewire-pulse.service
 systemctl --user enable --now wireplumber.service

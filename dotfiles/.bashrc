@@ -23,9 +23,6 @@ alias motd='./Scripts/random-motd.sh'
 alias reload='clear && source ~/.bashrc'
 alias update='yay --noconfirm'
 
-#alias code='code --ozone-platform=wayland'
-
-
 PS1='[\u@\h \W]\$ '
 . /etc/profile.d/custom-bash-options.sh
 

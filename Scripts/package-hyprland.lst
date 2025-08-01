@@ -37,9 +37,13 @@ hyprlock
 hyprsysteminfo
 hyprpaper
 hyprpicker
+hyprshot
+hyprsunset
 
 # Statusbar
 waybar
+nwg-panel
+nwg-dock-hyprland
 
 # Wallpaper
 waypaper
@@ -54,6 +58,7 @@ thunar
 # Systemd startup
 libnewt
 uwsm
+ly
 
 # Terminal Emulator
 #foot
@@ -64,3 +69,8 @@ kitty
 brave-bin
 #qutebrowser
 
+# Others
+nwg-displays
+nwg-look
+
+mesa
