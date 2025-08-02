@@ -28,9 +28,20 @@ PS1='[\u@\h \W]\$ '
 
 
 if [ "$XDG_SESSION_TYPE" = "wayland" ] && [ "$TERM_PROGRAM" = "" ]; then
-  clear; fastfetch
-  #echo mcdm | figlet | lolcat
-  #fortune -s | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n1) | lolcat
+
+  random_number=$((RANDOM % 3 + 1))
+  case $random_number in
+    1)
+      clear; fastfetch
+      ;;
+    2)
+      . ~/Scripts/random-fastfetch.sh
+      ;;
+    3)
+      . ~/Scripts/random-motd.sh
+      ;;
+  esac
+
   eval "$(starship init bash)"
 fi
 
