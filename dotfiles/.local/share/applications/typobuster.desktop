@@ -1,0 +1,16 @@
+[Desktop Entry]
+Type=Application
+
+Name=Typobuster
+Name[pl]=Typobuster
+
+GenericName=Simple text editor
+GenericName[pl]=Prosty edytor tekstu
+
+Comment=Lightweight editor with text transformations and auto-correction
+Comment[pl]=Lekki edytor z transformacjami tekstu i autokorektą
+
+Exec=typobuster
+Icon=typobuster
+Terminal=false
+Categories=Office;TextTools;TextEditor;mcdm
