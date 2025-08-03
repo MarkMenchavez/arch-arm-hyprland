@@ -16,9 +16,9 @@ alias cat='bat'
 alias rm='trash'
 alias vim='nvim'
 
-alias random='./Scripts/endless-random.sh'
-alias logo='./Scripts/random-fastfetch.sh'
-alias motd='./Scripts/random-motd.sh'
+alias random='. ~/Scripts/endless-random.sh'
+alias logo='. ~/Scripts/random-fastfetch.sh'
+alias motd='. ~/Scripts/random-motd.sh'
 
 alias reload='clear && source ~/.bashrc'
 alias update='yay --noconfirm'
