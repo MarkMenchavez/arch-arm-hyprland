@@ -1,0 +1,26 @@
+
+layout splits
+
+
+launch --var window=first --location=vsplit --type=window pipes
+
+launch --var window=second --location=vsplit --type=window htop
+
+resize_window wider 25
+
+focus_matching_window var:window=first
+
+launch --location=hsplit --type=window cmatrix
+launch --location=hsplit --type=window asciiquarium
+
+resize_window taller 15
+
+focus_matching_window var:window=second
+
+launch --location=hsplit --type=window bash -c 'sleep 0.2; exec cbonsai -S'
+
+resize_window shorter 5
+
+launch --location=vsplit --type=window bash -c 'gping google.com youtube.com'
+
+resize_window wider 15

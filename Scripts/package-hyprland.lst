@@ -59,20 +59,22 @@ thunar
 libnewt
 uwsm
 ly
-#greetd
+
 
 # Terminal Emulator
 #foot
 kitty
+alacritty
 
 # Browsers
-#firefox
+firefox
 brave-bin
 #qutebrowser
 
 # Others
-nwg-displays
-nwg-look
+#nwg-shell
+#nwg-displays
+#nwg-look
 
 # Drivers
 mesa

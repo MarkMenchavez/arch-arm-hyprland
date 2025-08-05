@@ -1,5 +1,8 @@
 # Shell
 fastfetch
+pfetch
+nerdfetch
+
 cowsay
 lolcat
 figlet
@@ -36,3 +39,5 @@ htop
 duf
 
 cava
+
+shell-color-scripts-git

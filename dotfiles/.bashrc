@@ -29,7 +29,8 @@ PS1='[\u@\h \W]\$ '
 
 if [ "$XDG_SESSION_TYPE" = "wayland" ] && [ "$TERM_PROGRAM" = "" ]; then
 
-  random_number=$((RANDOM % 3 + 1))
+  random_number=$((RANDOM % 6 + 1))
+  #random_number=4
   case $random_number in
     1)
       clear; fastfetch
@@ -39,6 +40,15 @@ if [ "$XDG_SESSION_TYPE" = "wayland" ] && [ "$TERM_PROGRAM" = "" ]; then
       ;;
     3)
       . ~/Scripts/random-motd.sh
+      ;;
+    4)
+      clear; colorscript random
+      ;;
+    5)
+      clear; nerdfetch
+      ;;
+    6)
+      clear; pfetch
       ;;
   esac
 
