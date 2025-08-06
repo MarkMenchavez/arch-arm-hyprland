@@ -28,3 +28,5 @@ sudo systemctl start docker
 
 sudo usermod -aG docker $USER
 newgrp docker
+
+sudo cp 20-quiet-printk.conf /etc/sysctl.d

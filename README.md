@@ -74,5 +74,20 @@ ILoveCandy
 ```
 ./Scripts/install-yay.sh
 
-./Scripts/install-{package-lst}.sh
+./Scripts/install-system.sh
+./Scripts/install-shell-term-utils.sh
+
+./Scripts/install-hyprland.sh
+
+./Scripts/instlal-dotnet-lts.sh
+./Scripts/install-development.sh
+./Scripts/install-vscode-extensions.sh
+
+#./Scripts/install-applications.sh
+
+./Scripts/setup-system.sh
+./Scripts/setup-dotfiles.sh
+./Scripts/set-dark-mode.sh
+
+./Scripts/install-docker-containers.sh
 ```
