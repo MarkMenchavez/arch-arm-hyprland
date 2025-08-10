@@ -47,33 +47,75 @@ Settings:
         * GRUB_UEFI
     5. Reboot 
 
-
-[x] Allow members of the group wheel to execute any command
-```
-nano /etc/pacman.d/mirrorlist   # Uncomment Singapore Mirror
-pacman -Syu                     # Full system upgrade
-pacman -S sudo                  # Execute a command as the super user 
-export EDITOR=nano  
-sudo visudo                     # Uncomment %wheel ALL=(ALL:ALL) ALL
-```
-
 [x] Configure pacman
-```
-nano /etc/pacman.conf            
+'''
+nano /etc/pacman.conf
 
-#Enable the following options
+#Enable the following
 Color
 VerbosePkgLists
 ILoveCandy
 ```
 
-[ ] Disable root
+[x] Configure mirror lists
+'''
+nano /etc/pacman.d/mirrolist
+# Uncomment Singapore Mirror
+'''
 
+[x] Install sudo
+```
+pacman -Sy      # Update Repositories
+pacman -S sudo  
+```
+
+[x] Allow members of the group wheel to execute any command
+```
+export EDITOR=nano  
+sudo visudo                     
+# Uncomment %wheel ALL=(ALL:ALL) ALL
+```
+
+[ ] Disable root password
+'''
+sudo passwd -l root
+sudo usermod -s /usr/bin/nologin root
+'''
+
+[x] Install yay
+'''
+./Scripts/install-yay.sh
+'''
+
+[x] Customize Grub Theme
+'''
+sudo pacman -S grub-theme-vimix
+sudo mkdir -p /boot/grub/themes/Vimix
+cp -r /usr/share/grub/themes/Vimix /boot/grub/themes/Vimix
+
+sudo nano /etc/default/grub
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash loglevel=3"
+GRUB_TERMINAL_OUTPUT=gfxterm
+GRUB_GFXMODE=1920x1200x32,1024x768x32,auto
+GRUB_THEME=/boot/grub/themes/Vimix/theme.txt
+
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+'''
+
+[x] Customize Plymouth
+'''
+sudo pacman -S plymouth
+sudo plymouth-set-default-theme -R spinfinity
+
+sudo nano /etc/mkinitcpio.conf
+HOOKS=(systemd pylomouth ...)
+
+sudo mkinitcpio -P
+'''
 
 [x] Execute Scripts
-```
-./Scripts/install-yay.sh
 
+```
 ./Scripts/install-system.sh
 ./Scripts/install-shell-term-utils.sh
 

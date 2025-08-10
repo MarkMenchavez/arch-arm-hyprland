@@ -15,6 +15,7 @@ alias grep='grep --color=auto'
 alias cat='bat'
 alias rm='trash'
 alias vim='nvim'
+alias vi='nvim'
 
 alias random='. ~/Scripts/endless-random.sh'
 alias logo='. ~/Scripts/random-fastfetch.sh'

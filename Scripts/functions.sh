@@ -25,3 +25,18 @@ function install_package() {
   GOPATH="$HOME/.local/go" yay -S --needed --noconfirm "${packages[@]}"
    
 }
+
+function backup_original() {
+  local file="$1"
+  local backup="${2:-${file}.bak}"
+
+  if [[ ! -f "$file" ]]; then
+    echo "Error: $file does not exist."
+    return 1
+  fi
+
+  if [[ ! -f "$backup" ]]; then
+    sudo cp --preserve=all "$file" "$backup"
+    echo "$backup created."
+  fi
+}
