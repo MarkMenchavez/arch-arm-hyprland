@@ -48,9 +48,7 @@ fi
 LINUX_FILE="/etc/grub.d/10_linux" 
 backup_original "$LINUX_FILE"
 
-#sudo sed -i 's|^echo[[:space:]]\+'\''\$(echo "\$message" | grub_quote)'\''|#echo    '\''$(echo "$message" | grub_quote)'\''|' "$LINUX_FILE"
 sudo sed -i '/^[[:space:]]*echo[[:space:]]\+'\''\$(echo "\$message" | grub_quote)'\''/ s/^/#/' "$LINUX_FILE"
-
 
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 

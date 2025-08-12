@@ -37,6 +37,7 @@ function backup_original() {
 
   if [[ ! -f "$backup" ]]; then
     sudo cp --preserve=all "$file" "$backup"
+    sudo chmod -x  "$backup"
     echo "$backup created."
   fi
 }
