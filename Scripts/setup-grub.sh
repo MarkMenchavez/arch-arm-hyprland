@@ -6,7 +6,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$SCRIPT_DIR/functions.sh"
 
 # Install required packages
-sudo pacman -Sy --noconfirm plymouth grub-theme-vimix
+sudo pacman -Sy --noconfirm --needed plymouth grub-theme-vimix
 
 # Copy theme
 sudo cp -r /usr/share/grub/themes/Vimix /boot/grub/themes/

@@ -28,8 +28,14 @@ backup_original "$MIRROR_FILE"
 # Uncomment Singapore ARM mirror (if present)
 sudo sed -i '/^# Server = .*sg\.mirror\.archlinuxarm\.org/ s/^# //' "$MIRROR_FILE"
 
+# Ensure correct date and time
+sudo timedatectl set-timezone Asia/Singapore
+sudo timedatectl set-ntp true
+sudo systemctl enable --now systemd-timesyncd
+sudo hwclock --systohc
+
 # Install pacman-contrib (contains paccache)
-sudo pacman -Sy --noconfirm pacman-contrib
+sudo pacman -Sy --noconfirm --needed pacman-contrib
 
 # Enable automatic cache cleanup
-sudo systemctl enable paccache.timer --now
+sudo systemctl enable --now paccache.timer 

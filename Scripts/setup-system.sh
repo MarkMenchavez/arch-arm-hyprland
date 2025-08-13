@@ -1,9 +1,5 @@
 #!/bin/bash
 
-sudo systemctl mask hwclock.service
-sudo systemctl enable systemd-timesyncd --now
-
-sudo systemctl enable paccache.timer
 
 sudo systemctl enable ly.service
 #sudo systemctl enable greetd.service
